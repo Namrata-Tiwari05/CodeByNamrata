@@ -44,3 +44,37 @@ int main() {
     cout << "K-th smallest number in lexicographical order: " << sol.findKthNumber(n, k) << endl;
     return 0;
 }
+// 🧠 Problem Explanation (LeetCode 440 - K-th Smallest in Lexicographical Order)
+// Prompt:
+// You are given two integers n and k. You need to return the k-th lexicographically smallest integer in the range [1, n].
+// The lexicographical order is similar to dictionary order, where numbers are compared digit by digit.
+// For example, for n = 13, the lexicographical order of numbers is: 1, 10, 11, 12, 13, 2, 3, ..., 9.
+// 🔧 Step-by-Step Approach
+// 🔹 Step 1: Start at prefix 1 (which is the first number in lexicographical order)
+// 🔹 Step 2: At every step:
+// Count how many numbers exist starting with current prefix (we call it step)
+
+// If k > step:
+
+// That means our answer is not in this subtree
+
+// Move to next sibling (i.e., curr = curr + 1)
+
+// Subtract step from k
+
+// If k ≤ step:
+
+// That means our answer is inside this subtree
+
+// Move to child (i.e., curr = curr * 10)
+
+// Decrease k by 1 (because we’re counting this move)
+
+// Repeat this until k == 0.
+
+// 🔹 Step 3: Return curr as the k-th number
+// ⏱️ Time Complexity
+// We only go as deep as the height of the tree, which is log₁₀(n), and in the worst case, we do this for about log n levels.
+
+// So time complexity is approximately O(log n * log n)
+
