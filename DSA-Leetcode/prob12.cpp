@@ -47,3 +47,23 @@ int main() {
     return 0;
 }
 // 🧠 Problem Name: Divide Array into Groups of Three
+// 🧠 Problem Logic / Explanation:
+// You're given an integer array nums and a value k. You must divide nums into groups of size 3 such that:
+
+// The difference between the maximum and minimum value in each group is less than or equal to k.
+
+// If it's not possible, return an empty array. If multiple groupings are possible, return any one.
+
+// ✅ Approach / Logic:
+// Sort the array first.
+// This ensures that the difference between the max and min in every group of 3 consecutive elements is the least possible.
+
+// Traverse the sorted array in steps of 3, forming a group with nums[i], nums[i+1], nums[i+2].
+
+// Check if the max - min (i.e., nums[i+2] - nums[i]) <= k:
+
+// If yes, it's a valid group.
+
+// If not, return an empty result as this group violates the condition.
+
+// Return the list of all valid groups.
