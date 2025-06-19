@@ -33,3 +33,20 @@ int main() {
 
 // Greedy Grouping – Start with the smallest number and try to include as many numbers as possible in the same group as long as their difference with the group's first number is ≤ k.
 
+// If a number is found such that:
+
+// nginx
+// Copy
+// Edit
+// current_num - start_of_group > k
+// Then start a new group, and update the start point.
+
+// Count how many such groups are formed — this is the answer.
+
+
+
+
+
+
+
+
