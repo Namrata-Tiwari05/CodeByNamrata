@@ -54,3 +54,18 @@ int main() {
 
     return 0;
 }
+// ✅ Problem Name: Minimum Deletions to Make Character Frequencies Equal
+// 🧠 Problem Logic / Intuition
+// You are given a string word and an integer k. The task is to make the difference between the frequency of any two characters at most k, by deleting as few characters as possible.
+
+// 🔍 Key Observations:
+// For each character frequency a in the map:
+
+// You try to make all other frequencies b such that abs(a - b) ≤ k.
+
+// If b < a, and b is too small → delete all occurrences of b.
+
+// If b > a + k, then we need to delete b - (a + k) characters to bring it into the [a, a+k] range.
+
+// Repeat this for every frequency a as a base, and calculate the minimum deletions required.
+
