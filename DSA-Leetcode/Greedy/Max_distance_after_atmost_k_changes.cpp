@@ -80,5 +80,3 @@ int main() {
 // abs(drt1 - drt2) + times * 2
 // → the abs() gives current distance
 // → times * 2 accounts for turning a move from one direction to its opposite, effectively stretching the distance by 2 per change.
-
-// ✅ Example:
